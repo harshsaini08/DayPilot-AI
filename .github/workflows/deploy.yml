@@ -37,6 +37,9 @@ jobs:
       - name: Run Test Suite
         run: npm run test
 
+      - name: Build Shared Package
+        run: npm run build --workspace=packages/shared
+
       - name: Build Web Application
         env:
           VITE_BASE_PATH: './'
