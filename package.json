@@ -1,0 +1,27 @@
+{
+  "name": "daypilot-ai",
+  "version": "1.0.0",
+  "description": "DayPilot AI — Ambient Agentic Productivity Platform (Alexa+-inspired)",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "server": "npm run dev --workspace=apps/mcp-server",
+    "build": "npm run build --workspaces --if-present",
+    "build:web": "npm run build --workspace=apps/web",
+    "build:server": "npm run build --workspace=apps/mcp-server",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit --project tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

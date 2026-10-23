@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.cache/
+*.log
+.DS_Store
+.env.local
+.env.*.local
+coverage/
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local development files
+*.local
+
